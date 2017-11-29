@@ -18,8 +18,8 @@ import { fieldConfigForList, fieldConfigForTable } from './src/fieldConfigType';
 import createMediaQuery from './src/createMediaQuery';
 
 const dim = Dimensions.get('screen');
+console.log('dim', dim)
 const dimWin = Dimensions.get('window');
-console.log('createMediaQuery', createMediaQuery)
 
 const getFieldConfig = createMediaQuery({
   768: fieldConfigForList,

@@ -116,19 +116,19 @@ export const fieldConfigForTable = {
 };
 ```
 
-The fieldConfig is an object which had several types (for the brevity we only focus on one type which is a piece from our data structure). The *fieldConfigForList* is an object with the key *piece* which has two objects that renders 3 values with specific styling.
+The fieldConfig is an object which had several types (for the brevity we only focus on one type which is a piece from our data structure). The **fieldConfigForList** is an object with the key **piece** which has two objects that renders 3 values with specific styling. ---> add screenshot
 
-In the *fieldConfigForTable* we have actually three objects which also renders 3 values but each of the value are located in the separate <Text /> (you will see later on).
+In the **fieldConfigForTable** we have actually three objects which also renders 3 values but each of the value are located in the separate Text (you will see later on). --->> Add screenshot
 
-Based on the orientation change and the width - we either render *fieldConfigForList* or *fieldConfigForTable*.
+Based on the width - we either render **fieldConfigForList** or **fieldConfigForTable**.
 
 It was easier that way to represent UI than on the component itself, mainly because few fields in the table view needs few extra style properties than one on the list.
 
-*renderValues* its a helper function (heavy usage of lodash) which populates 2 values with the dot between them unless one of the values is undefined then the dot is omitted.
+**renderValues** its a helper function (heavy usage of lodash) which populates 2 values with the dot between them unless one of the values is undefined then the dot is omitted.
 
 <hr />
 
-The *Item.js* component map over the *fieldConfig* prop, which populates the correct data with specific styling. As you can see passing the fieldConfig prop is a more concise way of rendering data with different styling into a component.
+The **Item.js** component map over the **fieldConfig** prop, which populates the correct data with specific styling. As you can see passing the fieldConfig prop is a more concise way of rendering data with different styling into a component.
 
 We use again our createMediaQuery function to generate the layout for list or table.
 

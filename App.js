@@ -17,10 +17,6 @@ import products from './src/data1';
 import { fieldConfigForList, fieldConfigForTable } from './src/fieldConfigType';
 import createMediaQuery from './src/createMediaQuery';
 
-const dim = Dimensions.get('screen');
-console.log('dim', dim)
-const dimWin = Dimensions.get('window');
-
 const getFieldConfig = createMediaQuery({
   768: fieldConfigForList,
   1024: fieldConfigForTable,
@@ -36,7 +32,8 @@ const getFieldConfig = createMediaQuery({
 //   }
 // }
 
-const isPortrait = (dim) => {
+const isPortrait = () => {
+  const dim = Dimensions.get('screen');
   return dim.height >= dim.width;
 };
 
@@ -45,7 +42,7 @@ export default class App extends Component<{}> {
   constructor() {
     super();
     this.state = {
-      orientation: isPortrait(dim) ? 'portrait' : 'landscape'
+      orientation: isPortrait() ? 'portrait' : 'landscape'
     }
   }
 

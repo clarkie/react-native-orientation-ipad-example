@@ -38,7 +38,6 @@ export default ({ orientation, product, fieldConfig }) => (
             key={index}
             style={{
               ...style,
-              paddingRight: index === fieldConfig.length - 1 ? 0 : 8,
             }}
           >
             {fn ? fn(product) : get(prop, product)}

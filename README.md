@@ -12,8 +12,7 @@ My latest task was to produce different layout based on orientation changes. I h
   (ADD screenshot)
 3. Height of the banner should be different on specific width.
 
-This second problem was one of the reason why we needed to centralized the media query which will compute the styling based also on specific width.
-
+I will focus on the first scenario for brevity but the same solution can be addressed in any other situation. I mention other problems to visualise the pattern that lead us to create a generic function which computes the styling object based on provided dimension.
 
 #### How?
 

@@ -226,5 +226,5 @@ const createMediaQuery = flow(
 
 ```
 
-Conclusion:
+### Conclusion:
 By creating generic createMediaQuery function we can be more flexible of creating new layout to any dimensions, as along as you provide the breakpoints. (write more!)
